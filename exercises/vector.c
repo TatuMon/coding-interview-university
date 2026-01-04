@@ -236,6 +236,8 @@ void multipleTests() {
   printf("Index of 213: %i\n", indexOf213);
   printf("Index of INT_MAX: %i\n", indexOfIntMin);
   printf("Index of 999: %i\n", indexOf999);
+
+  vectorFree(&vector);
 }
 
 void testInsertOutOfBounds() {
@@ -252,6 +254,8 @@ void testInsertOutOfBounds() {
 
   int atPos99 = vectorGet(&vector, 99);
   printf("Value at 99th index: %i\n", atPos99);
+
+  vectorFree(&vector);
 }
 
 void testPrepend() {
@@ -268,6 +272,8 @@ void testPrepend() {
   vectorPrepend(&vector, 5);
 
   vectorPrint(&vector);
+
+  vectorFree(&vector);
 }
 
 int main() {
